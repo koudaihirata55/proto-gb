@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Play PROTO</title>
+    <title>Play PROTO</title>
 
-<link rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
+    <header>
+        <h1>PROTO</h1>
+    </header>
 
-<h1>PROTO</h1>
+    <main>
 
-</header>
+        <h2>ゲーム画面</h2>
 
-<main>
+        <div id="game"></div>
 
-<h2>ゲーム画面</h2>
+        <p>
+            <a href="index.html">← タイトルへ戻る</a>
+        </p>
 
-<p>
+    </main>
 
-ここへEmulatorJSを組み込みます。
+    <!-- EmulatorJS 設定 -->
+    <script>
 
-</p>
+        window.EJS_player = "#game";
 
-<div id="game"></div>
+        window.EJS_core = "gb";
 
-<p>
+        window.EJS_gameName = "PROTO";
 
-<a href="index.html">
+        window.EJS_gameUrl = "roms/proto.gb";
 
-← 戻る
+        window.EJS_pathtodata = "emulatorjs/data/";
 
-</a>
+        window.EJS_startOnLoaded = true;
 
-</p>
+        window.EJS_disableDatabases = true;
 
-</main>
+    </script>
 
-<script src="js/player.js"></script>
+    <!-- EmulatorJS 読み込み -->
+    <script src="emulatorjs/data/loader.js"></script>
 
 </body>
 
